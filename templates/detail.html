@@ -11,18 +11,47 @@
       <div class="blog-post">
         <p>{{ article.content }}</p>
       </div>
-  </div>
-  <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-    <div class="sidebar-module"></div>
-      <h4>Hashtag</h4>
-      <ol class="list-unstyled">
-        {% for hashtag in hashtag_list %}
-        <li>#{{ hashtag }}</li>
+      <div class="comment-styled">
+        {% for comment in article.article_comments.all %}
+          <div>{{ comment.username }} : {{ comment.content }}</div>
         {% endfor %}
-      </ol>
-    <div class="sidebar-module"></div>
+      </div>
+      <div class="reply-form">
+        <form class="form-inline" method="POST" action="">
+          {% csrf_token %}
+        <div>
+          <div class="form-group">
+            <input placeholder="id" class="form-control" name="username" />
+          </div>
+          <div class="form-group">
+            <input placeholder="content" class="form-control" name="content" />
+          </div>
+          <div class="form-group">
+          <button class="btn btn-default" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module">
+        <h4>Categories</h4>
+        <ol class="list-unstyled">
+          {% for category in category_list %}
+          <li>#{{ category }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+      <div class="sidebar-module">
+        <h4>Hashtag</h4>
+        <ol class="list-unstyled">
+          {% for hashtag in hashtag_list %}
+          <li>#{{ hashtag }}</li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
   </div>
 </div>
-
 
 {% endblock %}

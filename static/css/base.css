@@ -55,3 +55,26 @@
     padding-left: 0;
     list-style: none;
 }
+
+.reply-form {
+    margin-top: 30px;
+}
+
+.comment-styled {
+    font-family: "나눔고딕", Georgia, serif;
+    font-size: 14px;
+    background-color: #f2f3f5;
+    color: #1c1e21;
+    border-radius: 18px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    /* display: inline-block; */
+}
+
+.div{
+    display: block;
+}
+
+<div class=" _6qw3" data-ft="{&quot;tn&quot;:&quot;K&quot;}" data-testid="UFI2Comment/body"><div class="_72vr"><a class="_6qw4" data-hovercard="/ajax/hovercard/user.php?id=100004073341809" href="/DHChoi8243">최동희</a> <span dir="ltr"><span class="_3l3x"><span>참고로 말하는 사람과 듣는 사람을 포함하여 말할 때는 지위 고하를 막론하고 "우리"가 맞고 "저희"라 하면 안됩니다. "저희"는 자신을 포함한 다수의 사람을 낮춰서 상대적으로 상대방을 높이는 단어이며 듣는 사람까지 포함해서 낮추면 높임법의 의미가 없습니다.</span></span></span></div></div>
